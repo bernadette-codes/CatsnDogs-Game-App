@@ -10,8 +10,39 @@ document.getElementById("year").innerHTML = n;
 // Start Game
 $("#startButton").click(function(){
     $(this).remove();
+
+    // Pets start moving....
+
+    // Drag Function
+    $(function() {
+        $(".draggable").draggable();
+
+        $("#petStore").droppable({
+            accept: ".draggable",
+            drop: function( event, ui ) {
+                count();
+                if (petsOut === 0) {
+                    goodJob();
+                }
+            }
+        });
+    });
 });
 
+// Pet In Counter
+var petsOut=10;
+function count() {
+    petsOut -= 1;
+    document.getElementById("numPets").innerHTML = petsOut;
+}
+
+//Good Job
+function goodJob() {
+    document.getElementById("instruction").style.visibility="hidden";
+    document.getElementById("timeUP").style.display="none";
+    document.getElementById("blurEnd").style.opacity = "0.3";
+    document.getElementById("goodjob").style.visibility="visible";
+}
 
 // 30 Sec Timer
 function start() {
@@ -34,5 +65,5 @@ function start() {
 function stop() {
     document.getElementById("instruction").style.visibility="hidden";
     document.getElementById("timeUP").style.visibility="visible";
-    document.getElementById("blurEnd").style.opacity = "0.4";
+    document.getElementById("blurEnd").style.opacity = "0.3";
 }
