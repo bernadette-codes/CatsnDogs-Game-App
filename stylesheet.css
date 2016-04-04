@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+    position: relative;
+    min-height: 95%;
+}
+
+body {
+    display: block;
+    padding: 0;
+    margin: 0 0 30px;
+
+}
+
+.navbar-brand {
+    padding-top:5px !important; padding-bottom:0 !important;
+    height: 30px;
+}
+
+.navbar {
+    min-height:30px !important;
+}
+
+a {
+    font-size: 1.25em !important;
+    color: #404040 !important;
+    text-shadow: 2px 2px 4px #ffffff;
+    margin: 5px !important;
+    border-bottom: 3px solid #404040 !important;
+}
+
+a:hover {
+    color: #088A08 !important;
+}
+
+.titleFont {
+    font-size: 2.2em;
+    font-family: "Arial", Gadget, sans-serif;
+    font-weight: 700;
+    margin-top: -10px;
+}
+
+#instruction {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1.2em;
+    font-family: "Arial", Gadget, sans-serif;
+    font-weight: 700;
+}
+
+#numPets, #countDown {
+    text-decoration: underline;
+    border-bottom: 1px solid #000;
+}
+
+#startButton {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 80px;
+    left: 0;
+    right: 0;
+    padding: 50px 0!important;
+    cursor:pointer !important;
+}
+
+#left {
+    margin: 3%;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 140px;
+    width: 44%;
+    height: 300px;
+    cursor: url(grabCursor.png), move;
+    border: 1px solid red;                          /* Delete */
+}
+
+#right {
+    margin: 3%;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 140px;
+    width: 44%;
+    height: 300px;
+    border: 1px solid blue;                          /* Delete */
+}
+
+#mainPen{
+    position: absolute;
+    margin-left: 20%;
+    z-index: -100;
+}
+
+#cat1, #cat2, #cat3, #cat4, #cat5,
+#dog1, #dog2, #dog3, #dog4, #dog5 {
+    width:45px;
+    height: 60px;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+#petStore {
+    width: 280px;
+    height: 300px;
+    float: left;
+    margin: 10px;
+}
+
+#goodjob {
+    background: url(goodjob.jpg) center center / 250px 210px no-repeat fixed;
+    width:100%;
+    height:100%;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    top: 130px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    visibility: hidden;
+}
+
+#timeUP {
+    background: url(timeisup.jpg) center center / 210px no-repeat fixed;
+    width:100%;
+    height:100%;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    top: 130px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    visibility: hidden;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    padding-top: 30px;
+}
+
+@media screen and (max-width: 550px) {
+    .titleFont {
+        font-size: 2em;
+    }
+    #instruction {
+        font-size: 1em !important;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    a {
+        font-size: 1em !important;
+    }
+    .titleFont {
+        font-size: 1.8em;
+    }
+}
