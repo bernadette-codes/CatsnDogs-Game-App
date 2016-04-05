@@ -2,112 +2,117 @@
 <html lang="en">
 
 <head>
- <meta charset="utf-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta name="author" content="Bernadette Engleman">
- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
- <link rel="stylesheet" type="text/css" href="stylesheet.css">
- <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
- <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
- <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
- <title>Cats and Dogs Game</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Bernadette Engleman">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <title>Cats and Dogs Game</title>
 </head>
 <body>
 
 <!-- Home -->
 <nav class="navbar">
- <div class="container-fluid">
-  <div class="navbar-header">
-   <a class="navbar-brand" href="http://www.bernadetteengleman.com/" id="home">Home</a>
-   <a class="navbar-brand" href="catsdogs.html">Reset</a>
-  </div>
- </div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="http://www.bernadetteengleman.com/" id="home">Home</a>
+            <a class="navbar-brand" href="catsdogs.html">Reset</a>
+        </div>
+    </div>
 </nav>
 
 <main id="blurEnd">
- <div class="container">
-  <h1 class="text-center titleFont">Cats & Dogs Game</h1>
+    <div class="container">
+        <h1 class="text-center titleFont" unselectable="on">Cats & Dogs Game</h1>
 
-  <div class="row" id="instruction">
-   <div class="col-sm-6 col-xm-12">
-    <p class="text-left">Move all pets to the pet store within 30 seconds.</p>
-   </div>
-   <div class="col-sm-6 col-xm-12">
-    <p class="text-left" id="timer">Time Left: <span id="countDown">30</span> sec &nbsp; Pets Out: <span id="numPets">10</span></p>
-   </div>
-  </div>
+        <div class="row" id="instruction">
+            <div class="col-sm-6 col-xm-12">
+                <p class="text-left" unselectable="on">Move all pets to the pet store within 15 seconds.</p>
+            </div>
+            <div class="col-sm-6 col-xm-12">
+                <p class="text-left" id="timer" unselectable="on">Time Left: <span id="countDown">15</span> sec &nbsp; Pets Out: <span id="numPets">10</span></p>
+            </div>
+        </div>
 
-  <!-- Left Pen -->
-  <div id="left">
+        <!-- Left Pen -->
+        <div id="left">
 
-   <div id="mainPen">
-    <p><img src="background.jpg" alt="Pen" style="height:300px"></p>
-   </div>
+            <div id="mainPen">
+                <p><img src="background.jpg" alt="Pen" id="mainPenPhoto" unselectable="on"></p>
+            </div>
 
-   <!-- Cats -->
-    <div id="cat1" class="draggable">
-     <p><img src="cat1.png" alt="cat1" style="width:45px"></p>
-    </div>
-    <div id="cat2" class="draggable">
-     <p><img src="cat2.png" alt="cat2" style="width:45px"></p>
-    </div>
-    <div id="cat3" class="draggable">
-     <p><img src="cat3.png" alt="cat3" style="width:45px"></p>
-    </div>
-    <div id="cat4" class="draggable">
-     <p><img src="cat4.png" alt="cat4" style="width:45px"></p>
-    </div>
-    <div id="cat5" class="draggable">
-     <p><img src="cat5.png" alt="cat5" style="width:45px"></p>
-    </div>
+            <!-- Cats -->
+            <div id="cat1" class="draggable">
+                <p><img src="cat1.png" alt="cat1" id="cat1Img" class="petSize" unselectable="on"></p>
+            </div>
+            <div id="cat2" class="draggable">
+                <p><img src="cat2.png" alt="cat2" id="cat2Img" class="petSize" unselectable="on"></p>
+            </div>
+            <div id="cat3" class="draggable">
+                <p><img src="cat3.png" alt="cat3" id="cat3Img" class="petSize" unselectable="on"></p>
+            </div>
+            <div id="cat4" class="draggable">
+                <p><img src="cat4.png" alt="cat4" id="cat4Img" class="petSize" unselectable="on"></p>
+            </div>
+            <div id="cat5" class="draggable">
+                <p><img src="cat5.png" alt="cat5" id="cat5Img" class="petSize" unselectable="on"></p>
+            </div>
 
-   <!-- Dogs -->
-    <div id="dog1" class="draggable">
-     <p><img src="dog1.png" alt="dog1" style="width:45px"></p>
-    </div>
-    <div id="dog2" class="draggable">
-     <p><img src="dog2.png" alt="dog2" style="width:45px"></p>
-    </div>
-    <div id="dog3" class="draggable">
-     <p><img src="dog3.png" alt="dog3" style="width:45px"></p>
-    </div>
-    <div id="dog4" class="draggable">
-     <p><img src="dog4.png" alt="dog4" style="width:45px"></p>
-    </div>
-    <div id="dog5" class="draggable">
-     <p><img src="dog5.png" alt="dog5" style="width:45px"></p>
-    </div>
+            <!-- Dogs -->
+            <div id="dog1" class="draggable">
+                <p><img src="dog1.png" alt="dog1" id="dog1Img" class="petSize" unselectable="on"></p>
+            </div>
+            <div id="dog2" class="draggable">
+                <p><img src="dog2.png" alt="dog2" id="dog2Img" class="petSize" unselectable="on"></p>
+            </div>
+            <div id="dog3" class="draggable">
+                <p><img src="dog3.png" alt="dog3" id="dog3Img" class="petSize" unselectable="on"></p>
+            </div>
+            <div id="dog4" class="draggable">
+                <p><img src="dog4.png" alt="dog4" id="dog4Img" class="petSize" unselectable="on"></p>
+            </div>
+            <div id="dog5" class="draggable">
+                <p><img src="dog5.png" alt="dog5" id="dog5Img" class="petSize" unselectable="on"></p>
+            </div>
 
-  </div>
+        </div>
 
-  <!-- Right Pen -->
-  <div id="right">
-   <!-- Cat's Pen -->
-    <div id="petStore">
-     <p><img src="petstore.png" alt="pet store" style="height:280px; width: 400px;"></p>
+        <!-- Right Pen -->
+        <div id="right">
+            <!-- Cat's Pen -->
+            <div id="petStore">
+                <p><img src="petstore.png" alt="pet store" id="petStorePhoto" unselectable="on"></p>
+            </div>
+        </div>
+
+        <!-- Start Button -->
+        <p style="text-align:center;"><img src="start.png" alt="START" onclick="start()" id="startButton" unselectable="on"></p>
+
     </div>
-  </div>
-
-  <!-- Start Button -->
-  <p style="text-align:center;"><img src="start.png" alt="START" style="width:100px" onclick="start()" id="startButton"></p>
-
- </div>
 </main>
 
-  <div id="goodjob"></div>
-  <div id="timeUP"></div>
+<div id="goodjob"></div>
+<div id="timeUP"></div>
+<div id="fail"></div>
 
 <footer class="container-fluid text-center">
- <div>
-  <p>Copyright © <span id="year"></span> Bernadette Engleman. All rights reserved.</p>
- </div>
+    <div>
+        <p>Copyright © <span id="year"></span> Bernadette Engleman. All rights reserved.</p>
+    </div>
 </footer>
 
 <script type="text/javascript" src="catsdogs.js"></script>
 <script>
-
+    //Landing Page
+    $(document).ready(function(){
+        var windowWidth=$(window).width();
+       //alert(windowWidth);
+    });
 </script>
 
 </body>
