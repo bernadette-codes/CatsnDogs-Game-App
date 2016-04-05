@@ -1,5 +1,5 @@
 /**
- * Created by Bernadette on 3/29/2016.
+ * Created by Bernadette on 4/3/2016.
  */
 
 // Copyright Year
@@ -7,15 +7,20 @@ var d = new Date(),
     n = d.getFullYear();
 document.getElementById("year").innerHTML = n;
 
+//Body Not Selectable
+window.onload = function() {
+    document.body.onselectstart = function() {
+        return false;
+    }
+}
+
 // Start Game
 $("#startButton").click(function(){
     $(this).remove();
 
-    // Pets start moving....
-
     // Drag Function
     $(function() {
-        $(".draggable").draggable();
+        $(".draggable").draggable({revert: "invalid"});
 
         $("#petStore").droppable({
             accept: ".draggable",
@@ -44,9 +49,9 @@ function goodJob() {
     document.getElementById("goodjob").style.visibility="visible";
 }
 
-// 30 Sec Timer
+// 15 Sec Timer
 function start() {
-    var timeLeft = 30,
+    var timeLeft = 15,
         elem = document.getElementById("countDown"),
         timerId = setInterval(countdown, 1000);
 
