@@ -10,7 +10,9 @@ body {
     display: block;
     padding: 0;
     margin: 0 0 30px;
-
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .navbar-brand {
@@ -34,6 +36,10 @@ a:hover {
     color: #088A08 !important;
 }
 
+#blurEnd {
+    cursor: url(grabCursor.png), move;
+}
+
 .titleFont {
     font-size: 2.2em;
     font-family: "Arial", Gadget, sans-serif;
@@ -55,6 +61,7 @@ a:hover {
 }
 
 #startButton {
+    width:100px;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -69,45 +76,73 @@ a:hover {
     margin: 3%;
     padding: 0;
     position: absolute;
-    left: 0;
+    left: 100px;
     top: 140px;
-    width: 44%;
+    width: 400px;
     height: 300px;
-    cursor: url(grabCursor.png), move;
-    border: 1px solid red;                          /* Delete */
 }
 
 #right {
     margin: 3%;
     padding: 0;
     position: absolute;
-    right: 0;
+    right: 100px;
     top: 140px;
-    width: 44%;
+    width: 400px;
     height: 300px;
-    border: 1px solid blue;                          /* Delete */
+    background-color: white;
 }
 
 #mainPen{
     position: absolute;
-    margin-left: 20%;
     z-index: -100;
 }
 
-#cat1, #cat2, #cat3, #cat4, #cat5,
-#dog1, #dog2, #dog3, #dog4, #dog5 {
-    width:45px;
+#mainPenPhoto {
+    width: 400px;
+}
+
+#petStore {
+    width: 350px;
+    height: 300px;
+    float: left;
+    margin: 10px;
+    background-color: white;
+    z-index: 97;
+}
+
+#petStorePhoto {
+    width: 350px;
+}
+
+.draggable {
+    width: 45px;
     height: 60px;
     float: left;
     padding: 0;
     margin: 0;
 }
 
-#petStore {
-    width: 280px;
-    height: 300px;
-    float: left;
-    margin: 10px;
+.petSize {
+    width:45px;
+}
+
+#cat1, #dog1 {
+    padding-top: 20px;
+    padding-left: 70px;
+}
+
+#cat2, #cat4, #dog2, #dog4 {
+    padding-top: 20px;
+    padding-left: 110px;
+}
+
+#cat3, #dog3 {
+    padding: 20px 100px 0 110px;
+}
+
+#cat5, #dog5 {
+    padding: 20px 100px 0 130px;
 }
 
 #goodjob {
@@ -138,6 +173,20 @@ a:hover {
     visibility: hidden;
 }
 
+#fail {
+    background: url(biggerScreen.jpg) center center / 300px no-repeat fixed;
+    width:100%;
+    height:100%;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    visibility: hidden;
+}
+
 footer {
     position: absolute;
     left: 0;
@@ -147,12 +196,405 @@ footer {
     padding-top: 30px;
 }
 
+/* Animations */
+#cat1Img, #dog3Img {
+    position:relative;
+    -webkit-animation: bounce 2s infinite;
+    -moz-animation: bounce 2s infinite;
+    -o-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@-webkit-keyframes bounce {
+    0%       { bottom:25px; }
+    50%      { bottom:-20px; }
+    100%     {bottom: 30px;}
+}
+
+@-moz-keyframes bounce {
+    0%       { bottom:25px; }
+    50%      { bottom:-20px; }
+    100%     {bottom: 30px;}
+}
+
+@-o-keyframes bounce {
+    0%       { bottom:25px; }
+    50%      { bottom:-20px; }
+    100%     {bottom: 30px;}
+}
+
+@keyframes bounce {
+    0%       { bottom:25px; }
+    50%      { bottom:-20px; }
+    100%     {bottom: 30px;}
+}
+
+#cat2Img, #dog1Img {
+    position:relative;
+    -webkit-animation: diagonal 2s infinite;
+    -moz-animation: diagonal 2s infinite;
+    -o-animation: diagonal 2s infinite;
+    animation: diagonal 2s infinite;
+}
+
+@-webkit-keyframes diagonal {
+    0%       { transform: translatex(-30px) translatey(-30px) }
+    50%      { transform: translatex(20px) translatey(20px); }
+    100%     { transform: translatex(-30px) translatey(-30px) }
+}
+
+@-moz-keyframes diagonal {
+    0%       { transform: translatex(-30px) translatey(-30px) }
+    50%      { transform: translatex(20px) translatey(20px); }
+    100%     { transform: translatex(-30px) translatey(-30px) }
+}
+
+@-o-keyframes diagonal {
+    0%       { transform: translatex(-30px) translatey(-30px) }
+    50%      { transform: translatex(20px) translatey(20px); }
+    100%     { transform: translatex(-30px) translatey(-30px) }
+}
+
+@keyframes diagonal {
+    0%       { transform: translatex(-30px) translatey(-30px) }
+    50%      { transform: translatex(20px) translatey(20px); }
+    100%     { transform: translatex(-30px) translatey(-30px) }
+}
+
+#cat3Img, #dog2Img {
+    position: relative;
+    -webkit-animation: rightLeft 2s infinite;
+    -moz-animation: rightLeft 2s infinite;
+    -o-animation: rightLeft 2s infinite;
+    animation: rightLeft 2s infinite;
+}
+
+@-webkit-keyframes rightLeft {
+    0% {left: 20px;}
+    50% {left: -50px;}
+    100% {left: 20px;}
+}
+
+@-moz-keyframes rightLeft {
+    0% {left: 20px;}
+    50% {left: -50px;}
+    100% {left: 20px;}
+}
+
+@-o-keyframes rightLeft {
+    0% {left: 20px;}
+    50% {left: -50px;}
+    100% {left: 20px;}
+}
+@keyframes rightLeft {
+    0% {left: 20px;}
+    50% {left: -50px;}
+    100% {left: 20px;}
+}
+
+#cat4Img, #dog5Img {
+    position: relative;
+    -webkit-animation: leftRight 2s infinite;
+    -moz-animation: leftRight 2s infinite;
+    -o-animation: leftRight 2s infinite;
+    animation: leftRight 2s infinite;
+}
+
+@-webkit-keyframes leftRight {
+    0% {left: -20px;}
+    50% {left: 50px;}
+    100% {left: -20px;}
+}
+
+@-moz-keyframes LeftRight {
+    0% {left: -20px;}
+    50% {left: 50px;}
+    100% {left: -20px;}
+}
+
+@-o-keyframes LeftRight {
+    0% {left: -20px;}
+    50% {left: 50px;}
+    100% {left: -20px;}
+}
+@keyframes leftRight {
+    0% {left: -20px;}
+    50% {left: 50px;}
+    100% {left: -20px;}
+}
+
+#cat5Img, #dog4Img {
+    -webkit-animation: circleAround 2s linear infinite;
+    -moz-animation: circleAround 2s linear infinite;
+    -o-animation: circleAround 2s linear infinite;
+    animation: circleAround 2s linear infinite;
+}
+
+@-webkit-keyframes circleAround {
+    from { -webkit-transform: rotate(0deg) translateX(40px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+}
+
+@-moz-keyframes circleAround {
+    from { -moz-transform: rotate(0deg) translateX(40px) rotate(0deg); }
+    to   { -moz-transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+}
+
+@-o-keyframes circleAround {
+    from { -o-transform: rotate(0deg) translateX(40px) rotate(0deg); }
+    to   { -o-transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+}
+
+@keyframes circleAround {
+    from { transform: rotate(0deg) translateX(40px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+}
+
+/* Media Queries */
+@media screen and (max-width: 1130px) {
+    #left {
+        left: 50px;
+    }
+    #right {
+        right: 50px;
+    }
+}
+@media screen and (max-width: 990px) {
+    #left {
+        left: 0;
+    }
+    #right {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    #right {
+        right: -50px;
+    }
+    #mainPenPhoto {
+        width: 350px;
+    }
+    #petStore {
+        width: 300px;
+        height: 270px;
+    }
+    #petStorePhoto {
+        width: 300px;
+    }
+    #dog4 {
+        padding-top: 5px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #instruction {
+        font-size: 1.1em !important;
+    }
+    #startButton {
+        width:75px;
+    }
+    #left {
+        width: 320px;
+        height: 250px;
+        top: 150px;
+    }
+    #right {
+        width: 320px;
+        height: 250px;
+        top: 150px;
+        right: 0;
+    }
+    #mainPenPhoto {
+        width: 320px;
+    }
+    #petStore {
+        width: 270px;
+        height: 240px;
+    }
+    #petStorePhoto {
+        width: 270px;
+    }
+    .draggable {
+        width: 22px;
+        height: 30px;
+    }
+    .petSize {
+        width:30px;
+    }
+    #cat1 {
+        padding-top: 30px;
+        padding-left: 30px;
+    }
+    #dog1 {
+        padding: 20px 50px 0 20px;
+    }
+    #cat2, #dog2 {
+        padding-top: 25px;
+        padding-left: 90px;
+    }
+    #cat3, #dog3 {
+        padding: 25px 90px 0 80px;
+    }
+    #cat4, #dog4 {
+        padding-top: 35px;
+        padding-left: 70px;
+    }
+    #cat5, #dog5 {
+        padding-right: 80px;
+    }
+    #goodjob {
+        background-size: 230px 190px;
+        top: 90px;
+    }
+    footer {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    #startButton {
+        width:65px;
+    }
+    #left {
+        width: 260px;
+        height: 200px;
+    }
+    #right {
+        width: 260px;
+        height: 200px;
+    }
+    #mainPenPhoto {
+        width: 260px;
+    }
+    #petStore {
+        width: 200px;
+        height: 180px;
+    }
+    #petStorePhoto {
+        width: 200px;
+    }
+    .draggable {
+        width: 18px;
+        height: 25px;
+    }
+    .petSize {
+        width:25px;
+    }
+    #dog1 {
+        padding-top: 30px;
+        padding-left: 30px;
+    }
+    #cat3, #dog3 {
+        padding: 25px 60px 0 60px;
+    }
+    #cat4, #dog4 {
+        padding-top: 15px;
+    }
+    #cat5, #dog5 {
+        padding: 25px 100px 0 130px;
+    }
+    #timeUP {
+        top: 90px;
+    }
+    #goodjob {
+        background-size: 190px 150px;
+        top: 60px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    #instruction {
+        font-size: 1em !important;
+    }
+    #startButton {
+        width:50px;
+    }
+    #left {
+        width: 200px;
+        height: 160px;
+    }
+    #right {
+        width: 200px;
+        height: 160px;
+    }
+    #mainPenPhoto {
+        width: 200px;
+    }
+    #petStore {
+        width: 160px;
+        height: 140px;
+    }
+    #petStorePhoto {
+        width: 160px;
+    }
+    .draggable {
+        width: 15px;
+        height: 20px;
+    }
+    .petSize {
+        width:20px;
+    }
+    #cat2 {
+        padding-left: 50px;
+    }
+    #cat3 {
+        padding: 15px 60px 0 30px;
+    }
+    #cat4 {
+        padding: 15px 30px 0 30px;
+    }
+    #cat5 {
+        padding: 25px 50px 0 50px;
+    }
+    #dog1 {
+        padding-top: 10px;
+        padding-left: 40px;
+    }
+    #dog2 {
+        padding-top: 5px;
+        padding-left: 60px;
+    }
+    #dog3 {
+        padding: 25px 30px 0 30px;
+    }
+    #dog4 {
+      padding-top: 0;
+      padding-left: 30px;
+    }
+    #dog5 {
+        padding: 5px 30px 0 10px;
+    }
+    #timeUP {
+        top: 50px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    #instruction {
+        font-size: 0.9em !important;
+    }
+}
+
 @media screen and (max-width: 550px) {
     .titleFont {
         font-size: 2em;
     }
-    #instruction {
-        font-size: 1em !important;
+    #startButton {
+        top: 100px;
+    }
+    #goodjob {
+        background-size: 150px 110px;
+        top: 30px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #fail {
+        visibility: visible;
+    }
+    #blurEnd:not(.titleFont) {
+        display: none;
     }
 }
 
