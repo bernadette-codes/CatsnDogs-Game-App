@@ -1,7 +1,3 @@
-/**
- * Created by Bernadette on 4/3/2016.
- */
-
 // Copyright Year
 var d = new Date(),
     n = d.getFullYear();
