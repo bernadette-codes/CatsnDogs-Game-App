@@ -15,25 +15,23 @@ body {
     user-select: none;
 }
 
-.navbar-brand {
-    padding-top:5px !important; padding-bottom:0 !important;
-    height: 30px;
+nav.navbar {
+    min-height:30px;
 }
 
-.navbar {
-    min-height:30px !important;
-}
-
-a {
-    font-size: 1.25em !important;
-    color: #404040 !important;
+nav.navbar div.navbar-header a.navbar-brand {
+    font-size: 1.25em;
+    color: #404040;
     text-shadow: 2px 2px 4px #ffffff;
-    margin: 5px !important;
-    border-bottom: 3px solid #404040 !important;
+    padding-top: 5px;
+    padding-bottom: 0;
+    height: 30px;
+    margin: 5px;
+    border-bottom: 3px solid #404040;
 }
 
-a:hover {
-    color: #088A08 !important;
+nav.navbar div.navbar-header a:hover {
+    color: #088A08;
 }
 
 #blurEnd {
@@ -60,7 +58,7 @@ a:hover {
     border-bottom: 1px solid #000;
 }
 
-#startButton {
+p img#startButton {
     width:100px;
     position: absolute;
     margin-left: auto;
@@ -68,8 +66,8 @@ a:hover {
     top: 80px;
     left: 0;
     right: 0;
-    padding: 50px 0!important;
-    cursor:pointer !important;
+    padding: 50px 0;
+    cursor: pointer;
 }
 
 #left {
@@ -388,8 +386,8 @@ footer {
 }
 
 @media screen and (max-width: 760px) {
-    #instruction {
-        font-size: 1.1em !important;
+    main#blurEnd div#instruction {
+        font-size: 1.1em;
     }
     #startButton {
         width:75px;
@@ -504,8 +502,8 @@ footer {
 }
 
 @media screen and (max-width: 630px) {
-    #instruction {
-        font-size: 1em !important;
+    main#blurEnd div#instruction {
+        font-size: 1em;
     }
     #startButton {
         width:50px;
@@ -571,8 +569,8 @@ footer {
 }
 
 @media screen and (max-width: 590px) {
-    #instruction {
-        font-size: 0.9em !important;
+    main#blurEnd div#instruction {
+        font-size: 0.9em;
     }
 }
 
@@ -599,8 +597,8 @@ footer {
 }
 
 @media screen and (max-width: 380px) {
-    a {
-        font-size: 1em !important;
+    nav.navbar div.navbar-header a {
+        font-size: 1em;
     }
     .titleFont {
         font-size: 1.8em;
