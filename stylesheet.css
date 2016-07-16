@@ -21,7 +21,7 @@ nav.navbar {
     min-height:30px;
 }
 
-nav.navbar div.navbar-header a.navbar-brand {
+a.navbar-brand {
     font-size: 1.25em;
     color: #404040;
     text-shadow: 2px 2px 4px #ffffff;
@@ -32,7 +32,7 @@ nav.navbar div.navbar-header a.navbar-brand {
     border-bottom: 3px solid #404040;
 }
 
-nav.navbar div.navbar-header a:hover {
+a.navbar-brand:hover {
     color: #088A08;
 }
 
@@ -62,7 +62,11 @@ nav.navbar div.navbar-header a:hover {
     border-bottom: 1px solid #000;
 }
 
-p img#startButton {
+.start {
+    text-align:center;
+}
+
+.startButton {
     width:100px;
     position: absolute;
     margin-left: auto;
@@ -75,7 +79,7 @@ p img#startButton {
 }
 
 /* Pet Pen */
-#left {
+#blurEnd .left {
     margin: 3%;
     padding: 0;
     position: absolute;
@@ -85,17 +89,17 @@ p img#startButton {
     height: 300px;
 }
 
-#mainPen{
+.mainPen {
     position: absolute;
     z-index: -100;
 }
 
-#mainPenPhoto {
+.mainPenPhoto {
     width: 400px;
 }
 
 /* Pet Store */
-#right {
+#blurEnd .right {
     margin: 3%;
     padding: 0;
     position: absolute;
@@ -106,7 +110,7 @@ p img#startButton {
     background-color: white;
 }
 
-#petStore {
+.petStore {
     width: 350px;
     height: 300px;
     float: left;
@@ -115,7 +119,7 @@ p img#startButton {
     z-index: 97;
 }
 
-#petStorePhoto {
+.petStorePhoto {
     width: 350px;
 }
 
@@ -133,21 +137,21 @@ p img#startButton {
 }
 
 /* Pet Position */
-#cat1, #dog1 {
+.cat1, .dog1 {
     padding-top: 20px;
     padding-left: 70px;
 }
 
-#cat2, #cat4, #dog2, #dog4 {
+.cat2, .cat4, .dog2, .dog4 {
     padding-top: 20px;
     padding-left: 110px;
 }
 
-#cat3, #dog3 {
+.cat3, .dog3 {
     padding: 20px 100px 0 110px;
 }
 
-#cat5, #dog5 {
+.cat5, .dog5 {
     padding: 20px 100px 0 130px;
 }
 
@@ -182,7 +186,7 @@ p img#startButton {
 }
 
 /* Warning for Too Small Screen */
-#fail {
+.fail {
     background: url(biggerScreen.jpg) center center / 300px no-repeat fixed;
     width:100%;
     height:100%;
@@ -206,7 +210,7 @@ footer {
 }
 
 /* Animations */
-#cat1Img, #dog3Img {
+.cat1Img, .dog3Img {
     position:relative;
     -webkit-animation: bounce 2s infinite;
     -moz-animation: bounce 2s infinite;
@@ -238,7 +242,7 @@ footer {
     100%     {bottom: 30px;}
 }
 
-#cat2Img, #dog1Img {
+.cat2Img, .dog1Img {
     position:relative;
     -webkit-animation: diagonal 2s infinite;
     -moz-animation: diagonal 2s infinite;
@@ -270,7 +274,7 @@ footer {
     100%     { transform: translatex(-30px) translatey(-30px) }
 }
 
-#cat3Img, #dog2Img {
+.cat3Img, .dog2Img {
     position: relative;
     -webkit-animation: rightLeft 2s infinite;
     -moz-animation: rightLeft 2s infinite;
@@ -301,7 +305,7 @@ footer {
     100% {left: 20px;}
 }
 
-#cat4Img, #dog5Img {
+.cat4Img, .dog5Img {
     position: relative;
     -webkit-animation: leftRight 2s infinite;
     -moz-animation: leftRight 2s infinite;
@@ -332,7 +336,7 @@ footer {
     100% {left: -20px;}
 }
 
-#cat5Img, #dog4Img {
+.cat5Img, .dog4Img {
     -webkit-animation: circleAround 2s linear infinite;
     -moz-animation: circleAround 2s linear infinite;
     -o-animation: circleAround 2s linear infinite;
@@ -362,73 +366,73 @@ footer {
 /* Media Queries */
 @media screen and (max-width: 1130px) {
     /* Pet Pen */
-    #left {
+    #blurEnd .left {
         left: 50px;
     }
     /* Pet Store */
-    #right {
+    #blurEnd .right {
         right: 50px;
     }
 }
 @media screen and (max-width: 990px) {
     /* Pet Pen */
-    #left {
+    #blurEnd .left {
         left: 0;
     }
     /* Pet Store */
-    #right {
+    #blurEnd .right {
         right: 0;
     }
 }
 
 @media screen and (max-width: 920px) {
     /* Pet Store */
-    #right {
+    #blurEnd .right {
         right: -50px;
     }
-    #mainPenPhoto {
+    .mainPenPhoto  {
         width: 350px;
     }
-    #petStore {
+    .petStore {
         width: 300px;
         height: 270px;
     }
-    #petStorePhoto {
+    .petStorePhoto {
         width: 300px;
     }
-    #dog4 {
+    .dog4 {
         padding-top: 5px;
     }
 }
 
 @media screen and (max-width: 760px) {
-    main#blurEnd div#instruction {
+    #instruction {
         font-size: 1.1em;
     }
-    #startButton {
+    .startButton {
         width:75px;
     }
     /* Pet Pen */
-    #left {
+    #blurEnd .left {
         width: 320px;
         height: 250px;
         top: 150px;
     }
     /* Pet Store */
-    #right {
+    #blurEnd .right {
         width: 320px;
         height: 250px;
         top: 150px;
         right: 0;
     }
-    #mainPenPhoto {
+    .mainPenPhoto  {
         width: 320px;
     }
-    #petStore {
+    .petStore {
         width: 270px;
         height: 240px;
     }
-    #petStorePhoto {
+    .petStorePhoto {
         width: 270px;
     }
     /* Pet Images */
@@ -439,25 +443,25 @@ footer {
     .petSize {
         width:30px;
     }
-    #cat1 {
+    .cat1 {
         padding-top: 30px;
         padding-left: 30px;
     }
-    #dog1 {
+    .dog1 {
         padding: 20px 50px 0 20px;
     }
-    #cat2, #dog2 {
+    .cat2, .dog2 {
         padding-top: 25px;
         padding-left: 90px;
     }
-    #cat3, #dog3 {
+    .cat3, .dog3 {
         padding: 25px 90px 0 80px;
     }
-    #cat4, #dog4 {
+    .cat4, .dog4 {
         padding-top: 35px;
         padding-left: 70px;
     }
-    #cat5, #dog5 {
+    .cat5, .dog5 {
         padding-right: 80px;
     }
     /* Won Game */
@@ -471,27 +475,27 @@ footer {
 }
 
 @media screen and (max-width: 690px) {
-    #startButton {
+    .startButton {
         width:65px;
     }
     /* Pet Pen */
-    #left {
+    #blurEnd .left {
         width: 260px;
         height: 200px;
     }
     /* Pet Store */
-    #right {
+    #blurEnd .right {
         width: 260px;
         height: 200px;
     }
-    #mainPenPhoto {
+    .mainPenPhoto {
         width: 260px;
     }
-    #petStore {
+    .petStore {
         width: 200px;
         height: 180px;
     }
-    #petStorePhoto {
+    .petStorePhoto {
         width: 200px;
     }
     /* Pet Images */
@@ -502,17 +506,17 @@ footer {
     .petSize {
         width:25px;
     }
-    #dog1 {
+    .dog1 {
         padding-top: 30px;
         padding-left: 30px;
     }
-    #cat3, #dog3 {
+    .cat3, .dog3 {
         padding: 25px 60px 0 60px;
     }
-    #cat4, #dog4 {
+    .cat4, .dog4 {
         padding-top: 15px;
     }
-    #cat5, #dog5 {
+    .cat5, .dog5 {
         padding: 25px 100px 0 130px;
     }
     /* Lost Game */
@@ -527,30 +531,30 @@ footer {
 }
 
 @media screen and (max-width: 630px) {
-    main#blurEnd div#instruction {
+    #instruction {
         font-size: 1em;
     }
-    #startButton {
+    .startButton {
         width:50px;
     }
     /* Pet Pen */
-    #left {
+    #blurEnd .left {
         width: 200px;
         height: 160px;
     }
     /* Pet Store */
-    #right {
+    #blurEnd .right {
         width: 200px;
         height: 160px;
     }
-    #mainPenPhoto {
+    .mainPenPhoto {
         width: 200px;
     }
-    #petStore {
+    .petStore {
         width: 160px;
         height: 140px;
     }
-    #petStorePhoto {
+    .petStorePhoto {
         width: 160px;
     }
     /* Pet Images */
@@ -561,34 +565,34 @@ footer {
     .petSize {
         width:20px;
     }
-    #cat2 {
+    .cat2 {
         padding-left: 50px;
     }
-    #cat3 {
+    .cat3 {
         padding: 15px 60px 0 30px;
     }
-    #cat4 {
+    .cat4 {
         padding: 15px 30px 0 30px;
     }
-    #cat5 {
+    .cat5 {
         padding: 25px 50px 0 50px;
     }
-    #dog1 {
+    .dog1 {
         padding-top: 10px;
         padding-left: 40px;
     }
-    #dog2 {
+    .dog2 {
         padding-top: 5px;
         padding-left: 60px;
     }
-    #dog3 {
+    .dog3 {
         padding: 25px 30px 0 30px;
     }
-    #dog4 {
+    .dog4 {
       padding-top: 0;
       padding-left: 30px;
     }
-    #dog5 {
+    .dog5 {
         padding: 5px 30px 0 10px;
     }
     /* Lost Game */
@@ -598,7 +602,7 @@ footer {
 }
 
 @media screen and (max-width: 590px) {
-    main#blurEnd div#instruction {
+    #instruction {
         font-size: 0.9em;
     }
 }
@@ -608,7 +612,7 @@ footer {
     .titleFont {
         font-size: 2em;
     }
-    #startButton {
+    .startButton {
         top: 100px;
     }
     /* Won Game */
@@ -620,7 +624,7 @@ footer {
 
 @media screen and (max-width: 430px) {
     /* Warning for Too Small Screen */
-    #fail {
+    .fail {
         visibility: visible;
     }
     #blurEnd:not(.titleFont) {
@@ -630,7 +634,7 @@ footer {
 
 @media screen and (max-width: 380px) {
     /* Home Link & Reset */
-    nav.navbar div.navbar-header a {
+    nav.navbar a {
         font-size: 1em;
     }
     /* Cats & Dogs Title */
