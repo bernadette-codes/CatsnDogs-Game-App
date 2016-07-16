@@ -11,14 +11,14 @@ window.onload = function() {
 }
 
 // Start Game
-$("#startButton").click(function(){
+$(".startButton").click(function(){
     $(this).remove();
 
     // Drag Function
     $(function() {
         $(".draggable").draggable({revert: "invalid"});
 
-        $("#petStore").droppable({
+        $(".petStore").droppable({
             accept: ".draggable",
             drop: function( event, ui ) {
                 count();
