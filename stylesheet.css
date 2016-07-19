@@ -62,10 +62,6 @@ a.navbar-brand:hover {
     border-bottom: 1px solid #000;
 }
 
-.start {
-    text-align:center;
-}
-
 .startButton {
     width:100px;
     position: absolute;
