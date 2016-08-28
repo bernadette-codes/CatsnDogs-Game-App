@@ -63,7 +63,6 @@ a.navbar-brand:hover {
 }
 
 .startButton {
-    width:100px;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -90,10 +89,6 @@ a.navbar-brand:hover {
     z-index: -100;
 }
 
-.mainPenPhoto {
-    width: 400px;
-}
-
 /* Pet Store */
 #blurEnd .right {
     margin: 3%;
@@ -115,10 +110,6 @@ a.navbar-brand:hover {
     z-index: 97;
 }
 
-.petStorePhoto {
-    width: 350px;
-}
-
 /* Pet Images */
 .draggable {
     width: 45px;
@@ -126,10 +117,6 @@ a.navbar-brand:hover {
     float: left;
     padding: 0;
     margin: 0;
-}
-
-.petSize {
-    width:45px;
 }
 
 /* Pet Position */
@@ -206,7 +193,7 @@ footer {
 }
 
 /* Animations */
-.cat1Img, .dog3Img {
+.cat1 img, .dog3 img {
     position:relative;
     -webkit-animation: bounce 2s infinite;
     -moz-animation: bounce 2s infinite;
@@ -238,7 +225,7 @@ footer {
     100%     {bottom: 30px;}
 }
 
-.cat2Img, .dog1Img {
+.cat2 img, .dog1 img {
     position:relative;
     -webkit-animation: diagonal 2s infinite;
     -moz-animation: diagonal 2s infinite;
@@ -270,7 +257,7 @@ footer {
     100%     { transform: translatex(-30px) translatey(-30px) }
 }
 
-.cat3Img, .dog2Img {
+.cat3 img, .dog2 img {
     position: relative;
     -webkit-animation: rightLeft 2s infinite;
     -moz-animation: rightLeft 2s infinite;
@@ -301,7 +288,7 @@ footer {
     100% {left: 20px;}
 }
 
-.cat4Img, .dog5Img {
+.cat4 img, .dog5 img {
     position: relative;
     -webkit-animation: leftRight 2s infinite;
     -moz-animation: leftRight 2s infinite;
@@ -332,7 +319,7 @@ footer {
     100% {left: -20px;}
 }
 
-.cat5Img, .dog4Img {
+.cat5 img, .dog4 img {
     -webkit-animation: circleAround 2s linear infinite;
     -moz-animation: circleAround 2s linear infinite;
     -o-animation: circleAround 2s linear infinite;
@@ -386,14 +373,14 @@ footer {
     #blurEnd .right {
         right: -50px;
     }
-    .mainPenPhoto  {
+    .mainPen img {
         width: 350px;
     }
     .petStore {
         width: 300px;
         height: 270px;
     }
-    .petStorePhoto {
+    .petStore img {
         width: 300px;
     }
     .dog4 {
@@ -421,14 +408,14 @@ footer {
         top: 150px;
         right: 0;
     }
-    .mainPenPhoto  {
+    .mainPen img {
         width: 320px;
     }
     .petStore {
         width: 270px;
         height: 240px;
     }
-    .petStorePhoto {
+    .petStore img {
         width: 270px;
     }
     /* Pet Images */
@@ -436,7 +423,7 @@ footer {
         width: 22px;
         height: 30px;
     }
-    .petSize {
+    .draggable img {
         width:30px;
     }
     .cat1 {
@@ -484,14 +471,14 @@ footer {
         width: 260px;
         height: 200px;
     }
-    .mainPenPhoto {
+    .mainPen img {
         width: 260px;
     }
     .petStore {
         width: 200px;
         height: 180px;
     }
-    .petStorePhoto {
+    .petStore img {
         width: 200px;
     }
     /* Pet Images */
@@ -499,7 +486,7 @@ footer {
         width: 18px;
         height: 25px;
     }
-    .petSize {
+    .draggable img {
         width:25px;
     }
     .dog1 {
@@ -543,14 +530,14 @@ footer {
         width: 200px;
         height: 160px;
     }
-    .mainPenPhoto {
+    .mainPen img {
         width: 200px;
     }
     .petStore {
         width: 160px;
         height: 140px;
     }
-    .petStorePhoto {
+    .petStore img {
         width: 160px;
     }
     /* Pet Images */
@@ -558,7 +545,7 @@ footer {
         width: 15px;
         height: 20px;
     }
-    .petSize {
+    .draggable img {
         width:20px;
     }
     .cat2 {
