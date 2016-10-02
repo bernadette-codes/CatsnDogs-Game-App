@@ -38,7 +38,7 @@ a.navbar-brand:hover {
 
 /* Hand Image Cursor */
 #blurEnd {
-    cursor: url(grabCursor.png), move;
+    cursor: url(img/grabCursor.png), move;
 }
 
 /* Cats & Dogs Title */
@@ -140,7 +140,7 @@ a.navbar-brand:hover {
 
 /* Won Game */
 #goodjob {
-    background: url(goodjob.jpg) center center / 250px 210px no-repeat fixed;
+    background: url(img/goodjob.jpg) center center / 250px 210px no-repeat fixed;
     width:100%;
     height:100%;
     position: fixed;
@@ -155,7 +155,7 @@ a.navbar-brand:hover {
 
 /* Lost Game */
 #timeUP {
-    background: url(timeisup.jpg) center center / 210px no-repeat fixed;
+    background: url(img/timeisup.jpg) center center / 210px no-repeat fixed;
     width:100%;
     height:100%;
     position: fixed;
@@ -170,7 +170,7 @@ a.navbar-brand:hover {
 
 /* Warning for Too Small Screen */
 .fail {
-    background: url(biggerScreen.jpg) center center / 300px no-repeat fixed;
+    background: url(img/biggerScreen.jpg) center center / 300px no-repeat fixed;
     width:100%;
     height:100%;
     position: fixed;
