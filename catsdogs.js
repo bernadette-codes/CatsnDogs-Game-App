@@ -8,24 +8,26 @@ window.onload = function() {
     document.body.onselectstart = function() {
         return false;
     }
-}
+};
 
 // Start Game
-$(".startButton").click(function(){
-    $(this).remove();
+$(document).ready(function() {
+    $(".startButton").click(function(){
+        $(this).remove();
 
-    // Drag Function
-    $(function() {
-        $(".draggable").draggable({revert: "invalid"});
+        // Drag Function
+        $(function() {
+            $(".draggable").draggable({revert: "invalid"});
 
-        $(".petStore").droppable({
-            accept: ".draggable",
-            drop: function( event, ui ) {
-                count();
-                if (petsOut === 0) {
-                    goodJob();
+            $(".petStore").droppable({
+                accept: ".draggable",
+                drop: function( event, ui ) {
+                    count();
+                    if (petsOut === 0) {
+                        goodJob();
+                    }
                 }
-            }
+            });
         });
     });
 });
