@@ -12,6 +12,7 @@ function start() {
         timerId = setInterval(countdown, 1000);
 
     function countdown() {
+        // Time is Up
         if (timeLeft == -1) {
             clearTimeout(timerId);
             stop();
@@ -28,14 +29,14 @@ function count() {
     document.getElementById("numPets").innerHTML = petsOut;
 }
 
-// Time is Up
+// Game Over
 function stop() {
     document.getElementById("instruction").style.visibility="hidden";
     document.getElementById("timeUP").style.visibility="visible";
     document.getElementById("blurEnd").style.opacity = "0.3";
 }
 
-//Good Job
+// Game Won
 function goodJob() {
     document.getElementById("instruction").style.visibility="hidden";
     document.getElementById("timeUP").style.display="none";
@@ -43,8 +44,9 @@ function goodJob() {
     document.getElementById("goodjob").style.visibility="visible";
 }
 
-// Start Game
+
 $(document).ready(function() {
+    // Start Game
     $(".startButton").click(function(){
         $(this).remove();
 
