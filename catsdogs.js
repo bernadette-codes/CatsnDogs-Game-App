@@ -3,7 +3,10 @@ var d = new Date(),
     n = d.getFullYear();
 document.getElementById("year").innerHTML = n;
 
-var petsOut = 10;
+var petsOut = 10,
+    instruction = document.getElementById("instruction"),
+    timeUP = document.getElementById("timeUP"),
+    blurEnd = document.getElementById("blurEnd");
 
 // 15 Sec Timer
 function start() {
@@ -32,16 +35,16 @@ function count() {
 
 // Game Over
 function stop() {
-    document.getElementById("instruction").style.visibility = "hidden";
-    document.getElementById("timeUP").style.visibility = "visible";
-    document.getElementById("blurEnd").style.opacity = "0.3";
+    instruction.style.visibility = "hidden";
+    timeUP.style.visibility = "visible";
+    blurEnd.style.opacity = "0.3";
 }
 
 // Game Won
 function goodJob() {
-    document.getElementById("instruction").style.visibility = "hidden";
-    document.getElementById("timeUP").style.display = "none";
-    document.getElementById("blurEnd").style.opacity = "0.3";
+    instruction.style.visibility = "hidden";
+    timeUP.style.display = "none";
+    blurEnd.style.opacity = "0.3";
     document.getElementById("goodjob").style.visibility = "visible";
 }
 
@@ -53,9 +56,12 @@ $(document).ready(function() {
 
         // Drag Function
         $(function() {
-            $(".draggable").draggable({revert: "invalid"});
+            var draggable = $(".draggable"),
+                petStore = $(".petStore");
 
-            $(".petStore").droppable({
+            draggable.draggable({revert: "invalid"});
+
+            petStore.droppable({
                 accept: ".draggable",
                 drop: function( event, ui ) {
                     count();
