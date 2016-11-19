@@ -26,7 +26,8 @@ function start() {
 // Pet In Counter
 function count() {
     petsOut -= 1;
-    document.getElementById("numPets").innerHTML = petsOut;
+    var numPets = document.getElementById("numPets");
+    numPets.innerHTML = petsOut;
 }
 
 // Game Over
