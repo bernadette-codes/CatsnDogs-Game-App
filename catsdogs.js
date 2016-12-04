@@ -23,7 +23,7 @@ function start() {
             elem.innerHTML = timeLeft;
             timeLeft--;
         }
-    }
+    } // end countdown
 }
 
 // Pet In Counter
@@ -69,10 +69,11 @@ $(document).ready(function() {
                         goodJob();
                     }
                 }
-            });
-        });
-    });
-});
+            }); // end droppable
+
+        }); // end drag function
+    }); // end click
+}); // end ready
 
 //Body Not Selectable
 window.onload = function() {
