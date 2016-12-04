@@ -24,7 +24,7 @@ function start() {
             timeLeft--;
         }
     } // end countdown
-}
+} // end start function
 
 // Pet In Counter
 function count() {
