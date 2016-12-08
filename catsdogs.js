@@ -4,9 +4,8 @@ var d = new Date(),
 document.getElementById("year").innerHTML = n;
 
 var petsOut = 10,
-    instruction = document.getElementById("instruction"),
     timeUP = document.getElementById("timeUP"),
-    blurEnd = document.getElementById("blurEnd");
+    numPets = document.getElementById("numPets");
 
 // 15 Sec Timer
 function start() {
@@ -29,25 +28,27 @@ function start() {
 // Pet In Counter
 function count() {
     petsOut -= 1;
-    var numPets = document.getElementById("numPets");
     numPets.innerHTML = petsOut;
 }
 
 // Game Over
+function gameOver() {
+    $('#instruction').hide();
+    $('#blurEnd').css('opacity', '0.3');
+}
+
+// Game Time is up
 function stop() {
-    instruction.style.visibility = "hidden";
+    gameOver();
     timeUP.style.visibility = "visible";
-    blurEnd.style.opacity = "0.3";
 }
 
 // Game Won
 function goodJob() {
-    instruction.style.visibility = "hidden";
+    gameOver();
     timeUP.style.display = "none";
-    blurEnd.style.opacity = "0.3";
     document.getElementById("goodjob").style.visibility = "visible";
 }
-
 
 $(document).ready(function() {
     // Start Game
