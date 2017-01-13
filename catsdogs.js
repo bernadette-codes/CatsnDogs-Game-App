@@ -4,13 +4,13 @@ var d = new Date(),
 document.getElementById("year").innerHTML = n;
 
 var petsOut = 10,
-    timeUP = document.getElementById("timeUP"),
-    numPets = document.getElementById("numPets");
+    $timeUP = document.getElementById("timeUP"),
+    $numPets = document.getElementById("numPets");
 
 // 15 Sec Timer
 function start() {
     var timeLeft = 15,
-        elem = document.getElementById("countDown"),
+        $elem = document.getElementById("countDown"),
         timerId = setInterval(countdown, 1000);
 
     function countdown() {
@@ -19,7 +19,7 @@ function start() {
             clearTimeout(timerId);
             stop();
         } else {
-            elem.innerHTML = timeLeft;
+            $elem.innerHTML = timeLeft;
             timeLeft--;
         }
     } // end countdown
@@ -28,7 +28,7 @@ function start() {
 // Pet In Counter
 function count() {
     petsOut -= 1;
-    numPets.innerHTML = petsOut;
+    $numPets.innerHTML = petsOut;
 }
 
 // Game Over
@@ -40,13 +40,13 @@ function gameOver() {
 // Game Time is up
 function stop() {
     gameOver();
-    timeUP.style.visibility = "visible";
+    $timeUP.style.visibility = "visible";
 }
 
 // Game Won
 function goodJob() {
     gameOver();
-    timeUP.style.display = "none";
+    $timeUP.style.display = "none";
     document.getElementById("goodjob").style.visibility = "visible";
 }
 
@@ -57,12 +57,10 @@ $(document).ready(function() {
 
         // Drag Function
         $(function() {
-            var draggable = $(".draggable"),
-                petStore = $(".petStore");
-
-            draggable.draggable({revert: "invalid"});
-
-            petStore.droppable({
+            var $draggable = $(".draggable"),
+                $petStore = $(".petStore");
+            $draggable.draggable({revert: "invalid"});
+            $petStore.droppable({
                 accept: ".draggable",
                 drop: function( event, ui ) {
                     count();
@@ -71,7 +69,6 @@ $(document).ready(function() {
                     }
                 }
             }); // end droppable
-
         }); // end drag function
     }); // end click
 }); // end ready
