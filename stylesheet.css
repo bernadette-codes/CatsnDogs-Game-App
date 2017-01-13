@@ -13,7 +13,6 @@ body {
     user-select: none; /* unable select */
     -moz-user-select: none;
     -webkit-user-select: none;
-
 }
 
 /* Home Link & Reset */
@@ -396,16 +395,15 @@ footer {
         width:75px;
     }
     /* Pet Pen */
-    #blurEnd .left {
+    #blurEnd .left,
+    /* Pet Store */
+    #blurEnd .right {
         width: 320px;
         height: 250px;
         top: 150px;
     }
     /* Pet Store */
     #blurEnd .right {
-        width: 320px;
-        height: 250px;
-        top: 150px;
         right: 0;
     }
     .mainPen img {
@@ -462,11 +460,8 @@ footer {
         width:65px;
     }
     /* Pet Pen */
-    #blurEnd .left {
-        width: 260px;
-        height: 200px;
-    }
-    /* Pet Store */
+    #blurEnd .left,
+        /* Pet Store */
     #blurEnd .right {
         width: 260px;
         height: 200px;
@@ -487,7 +482,7 @@ footer {
         height: 25px;
     }
     .draggable img {
-        width:25px;
+        width: 25px;
     }
     .dog1 {
         padding-top: 30px;
@@ -518,13 +513,10 @@ footer {
         font-size: 1em;
     }
     .startButton {
-        width:50px;
+        width: 50px;
     }
     /* Pet Pen */
-    #blurEnd .left {
-        width: 200px;
-        height: 160px;
-    }
+    #blurEnd .left,
     /* Pet Store */
     #blurEnd .right {
         width: 200px;
@@ -546,7 +538,7 @@ footer {
         height: 20px;
     }
     .draggable img {
-        width:20px;
+        width: 20px;
     }
     .cat2 {
         padding-left: 50px;
