@@ -7,24 +7,6 @@ var petsOut = 10,
     $timeUP = document.getElementById("timeUP"),
     $numPets = document.getElementById("numPets");
 
-// 15 Sec Timer
-function start() {
-    var timeLeft = 15,
-        $elem = document.getElementById("countDown"),
-        timerId = setInterval(countdown, 1000);
-
-    function countdown() {
-        // Time is Up
-        if (timeLeft == -1) {
-            clearTimeout(timerId);
-            stop();
-        } else {
-            $elem.innerHTML = timeLeft;
-            timeLeft--;
-        }
-    } // end countdown
-} // end start function
-
 // Pet In Counter
 function count() {
     petsOut -= 1;
@@ -52,25 +34,39 @@ function goodJob() {
 
 $(document).ready(function() {
     // Start Game
-    $(".startButton").click(function(){
-        $(this).remove();
+    $(".startButton").on('click', function(){
+        var $elem = document.getElementById("countDown"),
+            $draggable = $(".draggable"),
+            $petStore = $(".petStore"),
+            timeLeft = 15,
+            timerId = setInterval(countdown, 1000);
 
-        // Drag Function
-        $(function() {
-            var $draggable = $(".draggable"),
-                $petStore = $(".petStore");
-            $draggable.draggable({revert: "invalid"});
-            $petStore.droppable({
-                accept: ".draggable",
-                drop: function( event, ui ) {
-                    count();
-                    if (petsOut === 0) {
-                        goodJob();
-                    }
+        // 15 Sec Timer
+        function countdown() {
+            // Time is Up
+            if (timeLeft == -1) {
+                clearTimeout(timerId);
+                stop();
+            } else {
+                $elem.innerHTML = timeLeft;
+                timeLeft--;
+            }
+        } // end countdown
+
+        // Drag & Drop Function
+        $draggable.draggable({revert: "invalid"});
+        $petStore.droppable({
+            accept: ".draggable",
+            drop: function( event, ui ) {
+                count();
+                if (petsOut === 0) {
+                    goodJob();
                 }
-            }); // end droppable
-        }); // end drag function
-    }); // end click
+            }
+        }); // end droppable
+
+        $(this).remove();
+    }); // end startButton click
 }); // end ready
 
 //Body Not Selectable
