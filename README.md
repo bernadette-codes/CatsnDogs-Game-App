@@ -2,7 +2,7 @@
 **Cats and Dogs Game**
 --------------------
 
-The objective of [Cats and Dogs Game](http://www.bernadetteengleman.com/Apps/Cats%20and%20Dogs/catsdogs.html) is to move all 10 pets to the pet store within 15 seconds.
+The objective of [Cats and Dogs Game](http://www.bernadetteengleman.com/Apps/CatsnDogs-Game-App/catsdogs.html) is to move all 10 pets to the pet store within 15 seconds.
 
 
 ![Cats and Dogs Game Webpage](http://www.bernadetteengleman.com/img/portfolio/catsdogsthumbnail.jpg)
