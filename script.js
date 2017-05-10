@@ -34,10 +34,10 @@ function goodJob() {
 
 $(document).ready(function() {
     // Start Game
-    $(".startButton").on('click', function(){
+    $("#startButton").on('click', function(){
         var $elem = document.getElementById("countDown"),
             $draggable = $(".draggable"),
-            $petStore = $(".petStore"),
+            $petStore = $("#petStore"),
             timeLeft = 15,
             timerId = setInterval(countdown, 1000);
 
