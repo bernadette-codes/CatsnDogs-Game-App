@@ -61,7 +61,7 @@ a.navbar-brand:hover {
     border-bottom: 1px solid #000;
 }
 
-.startButton {
+#startButton {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -100,7 +100,7 @@ a.navbar-brand:hover {
     background-color: white;
 }
 
-.petStore {
+#petStore {
     width: 350px;
     height: 300px;
     float: left;
@@ -375,11 +375,11 @@ footer {
     .mainPen img {
         width: 350px;
     }
-    .petStore {
+    #petStore {
         width: 300px;
         height: 270px;
     }
-    .petStore img {
+    #petStore img {
         width: 300px;
     }
     .dog4 {
@@ -391,7 +391,7 @@ footer {
     #instruction {
         font-size: 1.1em;
     }
-    .startButton {
+    #startButton {
         width:75px;
     }
     /* Pet Pen */
@@ -409,11 +409,11 @@ footer {
     .mainPen img {
         width: 320px;
     }
-    .petStore {
+    #petStore {
         width: 270px;
         height: 240px;
     }
-    .petStore img {
+    #petStore img {
         width: 270px;
     }
     /* Pet Images */
@@ -456,7 +456,7 @@ footer {
 }
 
 @media screen and (max-width: 690px) {
-    .startButton {
+    #startButton {
         width:65px;
     }
     /* Pet Pen */
@@ -469,11 +469,11 @@ footer {
     .mainPen img {
         width: 260px;
     }
-    .petStore {
+    #petStore {
         width: 200px;
         height: 180px;
     }
-    .petStore img {
+    #petStore img {
         width: 200px;
     }
     /* Pet Images */
@@ -512,7 +512,7 @@ footer {
     #instruction {
         font-size: 1em;
     }
-    .startButton {
+    #startButton {
         width: 50px;
     }
     /* Pet Pen */
@@ -525,11 +525,11 @@ footer {
     .mainPen img {
         width: 200px;
     }
-    .petStore {
+    #petStore {
         width: 160px;
         height: 140px;
     }
-    .petStore img {
+    #petStore img {
         width: 160px;
     }
     /* Pet Images */
@@ -587,7 +587,7 @@ footer {
     .titleFont {
         font-size: 2em;
     }
-    .startButton {
+    #startButton {
         top: 100px;
     }
     /* Won Game */
