@@ -8,7 +8,7 @@ The objective of [Cats and Dogs Game](http://www.bernadetteengleman.com/Apps/Cat
 ![Cats and Dogs Game Webpage](http://www.bernadetteengleman.com/img/portfolio/catsdogsthumbnail.jpg)
 
 
- - 	Single-page, responsive web application game programmed with JavaScript
+ - Single-page, responsive web app programmed with JavaScript
  - Utilizes CSS3 Animation and jQuery UI
 
 
