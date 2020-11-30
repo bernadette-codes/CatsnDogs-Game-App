@@ -6,109 +6,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cats and Dogs Game | Bernadette Estacio</title>
-    <meta name="description" content="game objective is to move all 10 pets to the pet store within 15 seconds">
+    <meta name="description" content="Game objective is to move all 10 pets to the pet store within 15 seconds">
     <meta name="keywords" content="pet game, cat game, dog game">
     <meta name="author" content="Bernadette Estacio">
-    <link rel="shortcut icon" href="../../img/beIcon.png">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body>
+    <nav class="navbar container-fluid">
+        <a class="navbar-brand" href="../../index.html">Home</a>
+        <a class="navbar-brand" href="catsdogs.html">Reset</a>
+    </nav>
 
-<!-- Home Link -->
-<nav class="navbar container-fluid">
-    <a class="navbar-brand" href="../../index.html">Home</a>
-    <a class="navbar-brand" href="catsdogs.html">Reset</a>
-</nav>
+    <main id="blurEnd">
+        <h1 class="titleFont" unselectable="on">Cats & Dogs Game</h1>
 
-<main id="blurEnd">
-    <div class="container">
-        <!-- Title-->
-        <h1 class="text-center titleFont" unselectable="on">Cats & Dogs Game</h1>
+        <div id="instruction">
+            <p unselectable="on">Move all pets to the pet store within 15 seconds.</p>
 
-        <div class="row" id="instruction">
-            <div class="col-sm-6 col-xs-12">
-                <!-- Instruction -->
-                <p class="text-left" unselectable="on">Move all pets to the pet store within 15 seconds.</p>
-            </div>
-            <div class="col-sm-6 col-xs-12">
-                <!-- Timer & Counter -->
-                <p class="text-left" unselectable="on">Time Left: <span id="countDown">15</span> sec &nbsp;
-                    Pets Out: <span id="numPets">10</span></p>
-            </div>
+            <!-- Timer & Counter -->
+            <p unselectable="on">Time Left: <span id="countDown">15</span> sec &nbsp;
+                Pets Out: <span id="numPets">10</span></p>
         </div>
 
-        <!-- Left Side -->
-        <div class="left">
-            <!-- Pet Pen Photo -->
-            <div class="mainPen">
-                <img src="img/background.jpg" alt="Pen" width="400" unselectable="on">
-            </div>
-
-            <!-- Cats -->
-            <div class="cat1 draggable">
-                <img src="img/cat1.png" alt="cat1" width="45" unselectable="on">
-            </div>
-            <div class="cat2 draggable">
-                <img src="img/cat2.png" alt="cat2" width="45" unselectable="on">
-            </div>
-            <div class="cat3 draggable">
-                <img src="img/cat3.png" alt="cat3" width="45" unselectable="on">
-            </div>
-            <div class="cat4 draggable">
-                <img src="img/cat4.png" alt="cat4" width="45" unselectable="on">
-            </div>
-            <div class="cat5 draggable">
-                <img src="img/cat5.png" alt="cat5" width="45" unselectable="on">
-            </div>
-
-            <!-- Dogs -->
-            <div class="dog1 draggable">
-                <img src="img/dog1.png" alt="dog1" width="45" unselectable="on">
-            </div>
-            <div class="dog2 draggable">
-                <img src="img/dog2.png" alt="dog2" width="45" unselectable="on">
-            </div>
-            <div class="dog3 draggable">
-                <img src="img/dog3.png" alt="dog3" width="45" unselectable="on">
-            </div>
-            <div class="dog4 draggable">
-                <img src="img/dog4.png" alt="dog4" width="45" unselectable="on">
-            </div>
-            <div class="dog5 draggable">
-                <img src="img/dog5.png" alt="dog5" width="45" unselectable="on">
-            </div>
-        </div>
-
-        <!-- Right Side -->
-        <div class="right">
-            <!-- Pet Store -->
-            <div id="petStore">
-                <img src="img/petstore.png" alt="pet store" width="350" unselectable="on">
-            </div>
-        </div>
-
-        <!-- Start Button -->
-        <div>
+        <div class="text-center">
             <img src="img/start.png" alt="START" width="100" id="startButton" unselectable="on">
         </div>
 
-    </div>
-</main>
+        <div class="gameArea">
+            <div class="left">
+                <!-- Pet Pen Photo -->
+                <div class="mainPen">
+                    <img src="img/background.jpg" alt="Pen" width="400" unselectable="on">
+                </div>
 
-<div id="goodjob"></div>
-<div id="timeUP"></div>
-<div class="fail"></div>
+                <!-- Cats -->
+                <div class="cat1 draggable">
+                    <img src="img/cat1.png" alt="cat1" width="45" unselectable="on">
+                </div>
+                <div class="cat2 draggable">
+                    <img src="img/cat2.png" alt="cat2" width="45" unselectable="on">
+                </div>
+                <div class="cat3 draggable">
+                    <img src="img/cat3.png" alt="cat3" width="45" unselectable="on">
+                </div>
+                <div class="cat4 draggable">
+                    <img src="img/cat4.png" alt="cat4" width="45" unselectable="on">
+                </div>
+                <div class="cat5 draggable">
+                    <img src="img/cat5.png" alt="cat5" width="45" unselectable="on">
+                </div>
 
-<footer class="container-fluid text-center">
-    <p><small>Copyright © 2015-<span id="year"></span> Bernadette Estacio. All rights reserved.</small></p>
-</footer>
+                <!-- Dogs -->
+                <div class="dog1 draggable">
+                    <img src="img/dog1.png" alt="dog1" width="45" unselectable="on">
+                </div>
+                <div class="dog2 draggable">
+                    <img src="img/dog2.png" alt="dog2" width="45" unselectable="on">
+                </div>
+                <div class="dog3 draggable">
+                    <img src="img/dog3.png" alt="dog3" width="45" unselectable="on">
+                </div>
+                <div class="dog4 draggable">
+                    <img src="img/dog4.png" alt="dog4" width="45" unselectable="on">
+                </div>
+                <div class="dog5 draggable">
+                    <img src="img/dog5.png" alt="dog5" width="45" unselectable="on">
+                </div>
+            </div>
 
-<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="script.js"></script>
+            <div class="right">
+                <div id="petStore">
+                    <img src="img/petstore.png" alt="pet store" width="350" unselectable="on">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="goodjob"></div>
+    <div id="timeUP"></div>
+    <div class="fail"></div>
+
+    <footer class="container-fluid text-center">
+        <p>© 2015-<span id="year"></span> Bernadette Estacio</small></p>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>

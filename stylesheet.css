@@ -1,5 +1,4 @@
 @charset "utf-8";
-/* CSS Document */
 
 html {
     position: relative;
@@ -9,78 +8,69 @@ html {
 body {
     display: block;
     padding: 0;
-    margin: 0 0 30px;
+    margin: 0 0 20px;
     user-select: none; /* unable select */
     -moz-user-select: none;
     -webkit-user-select: none;
 }
 
-/* Home Link & Reset */
-nav.navbar {
-    min-height:30px;
-}
-
 a.navbar-brand {
+    display: inline-block;
+    height: auto;
+    background-color: #797979;
+    color:white;
     font-size: 1.25em;
-    color: #404040;
-    text-shadow: 2px 2px 4px #ffffff;
-    padding-top: 5px;
-    padding-bottom: 0;
-    height: 30px;
+    padding: 10px 15px;
     margin: 5px;
-    border-bottom: 3px solid #404040;
+    border-radius: 10px;
+    transition: all ease;
 }
 
 a.navbar-brand:hover {
-    color: #088A08;
+    background-color: #404040;
 }
 
-/* Hand Image Cursor */
-#blurEnd {
-    cursor: url(img/grabCursor.png), move;
-}
-
-/* Cats & Dogs Title */
 .titleFont {
-    font-size: 2.2em;
+    font-size: 3em;
     font-family: "Arial", Gadget, sans-serif;
     font-weight: 700;
-    margin-top: -10px;
+    margin: 5vh auto 30px;
+    text-align: center;
 }
 
 #instruction {
-    padding-left: 5%;
-    padding-right: 5%;
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-family: "Arial", Gadget, sans-serif;
     font-weight: 700;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #numPets, #countDown {
-    text-decoration: underline;
-    border-bottom: 1px solid #000;
+    padding: 5px;
+    border: 1px solid #4c4c4c;
 }
 
 #startButton {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    top: 80px;
-    left: 0;
-    right: 0;
-    padding: 50px 0;
+    position: relative;
+    margin: 5vh auto 0;
+    padding: 0;
     cursor: pointer;
 }
 
-/* Pet Pen */
-#blurEnd .left {
-    margin: 3%;
-    padding: 0;
-    position: absolute;
-    left: 100px;
-    top: 140px;
+.gameArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10vh;
+    cursor: url(img/grabCursor.png), move;
+}
+
+.gameArea .left {
     width: 400px;
     height: 300px;
+    margin-right: 50px;
 }
 
 .mainPen {
@@ -88,23 +78,9 @@ a.navbar-brand:hover {
     z-index: -100;
 }
 
-/* Pet Store */
-#blurEnd .right {
-    margin: 3%;
-    padding: 0;
-    position: absolute;
-    right: 100px;
-    top: 140px;
-    width: 400px;
-    height: 300px;
-    background-color: white;
-}
-
 #petStore {
     width: 350px;
     height: 300px;
-    float: left;
-    margin: 10px;
     background-color: white;
     z-index: 97;
 }
@@ -130,7 +106,7 @@ a.navbar-brand:hover {
 }
 
 .cat3, .dog3 {
-    padding: 20px 100px 0 110px;
+    padding: 20px 90px 0 95px;
 }
 
 .cat5, .dog5 {
@@ -139,7 +115,7 @@ a.navbar-brand:hover {
 
 /* Won Game */
 #goodjob {
-    background: url(img/goodjob.jpg) center center / 250px 210px no-repeat fixed;
+    background: url(img/goodjob.jpg) center center / 375px 315px no-repeat fixed;
     width:100%;
     height:100%;
     position: fixed;
@@ -154,7 +130,7 @@ a.navbar-brand:hover {
 
 /* Lost Game */
 #timeUP {
-    background: url(img/timeisup.jpg) center center / 210px no-repeat fixed;
+    background: url(img/timeisup.jpg) center center / 315px no-repeat fixed;
     width:100%;
     height:100%;
     position: fixed;
@@ -164,21 +140,6 @@ a.navbar-brand:hover {
     left: 0;
     right: 0;
     z-index: 99;
-    visibility: hidden;
-}
-
-/* Warning for Too Small Screen */
-.fail {
-    background: url(img/biggerScreen.jpg) center center / 300px no-repeat fixed;
-    width:100%;
-    height:100%;
-    position: fixed;
-    margin-left: auto;
-    margin-right: auto;
-    top: 50px;
-    left: 0;
-    right: 0;
-    z-index: 98;
     visibility: hidden;
 }
 
@@ -345,32 +306,9 @@ footer {
     to   { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
 }
 
-/* Media Queries */
-@media screen and (max-width: 1130px) {
-    /* Pet Pen */
-    #blurEnd .left {
-        left: 50px;
-    }
-    /* Pet Store */
-    #blurEnd .right {
-        right: 50px;
-    }
-}
-@media screen and (max-width: 990px) {
-    /* Pet Pen */
-    #blurEnd .left {
-        left: 0;
-    }
-    /* Pet Store */
-    #blurEnd .right {
-        right: 0;
-    }
-}
-
 @media screen and (max-width: 920px) {
-    /* Pet Store */
-    #blurEnd .right {
-        right: -50px;
+    .gameArea .left {
+        margin-right: -50px;
     }
     .mainPen img {
         width: 350px;
@@ -388,23 +326,11 @@ footer {
 }
 
 @media screen and (max-width: 760px) {
+    .titleFont {
+        font-size: 2.5em;
+    }
     #instruction {
-        font-size: 1.1em;
-    }
-    #startButton {
-        width:75px;
-    }
-    /* Pet Pen */
-    #blurEnd .left,
-    /* Pet Store */
-    #blurEnd .right {
-        width: 320px;
-        height: 250px;
-        top: 150px;
-    }
-    /* Pet Store */
-    #blurEnd .right {
-        right: 0;
+        font-size: 1.25em;
     }
     .mainPen img {
         width: 320px;
@@ -416,7 +342,6 @@ footer {
     #petStore img {
         width: 270px;
     }
-    /* Pet Images */
     .draggable {
         width: 22px;
         height: 30px;
@@ -431,38 +356,45 @@ footer {
     .dog1 {
         padding: 20px 50px 0 20px;
     }
-    .cat2, .dog2 {
+    .cat2 {
         padding-top: 25px;
         padding-left: 90px;
+    }
+    .dog2 {
+        padding-top: 25px;
+        padding-left: 80px;
+        padding-right: 100px;
     }
     .cat3, .dog3 {
         padding: 25px 90px 0 80px;
     }
-    .cat4, .dog4 {
+    .cat4 {
+        padding-top: 50px;
+        padding-left: 50px;
+        padding-right: 120px;
+    }
+    .dog4 {
         padding-top: 35px;
         padding-left: 70px;
     }
-    .cat5, .dog5 {
+    .cat5 {
+        padding-right: 110px;
+    } 
+    .dog5 {
         padding-right: 80px;
     }
-    /* Won Game */
     #goodjob {
         background-size: 230px 190px;
         top: 90px;
     }
-    footer {
-        visibility: hidden;
-    }
 }
 
 @media screen and (max-width: 690px) {
-    #startButton {
-        width:65px;
+    .gameArea .left {
+        margin-right: 10px;
     }
-    /* Pet Pen */
-    #blurEnd .left,
-        /* Pet Store */
-    #blurEnd .right {
+    .gameArea .left,
+    .gameArea .right {
         width: 260px;
         height: 200px;
     }
@@ -472,11 +404,11 @@ footer {
     #petStore {
         width: 200px;
         height: 180px;
+        margin: auto;
     }
     #petStore img {
         width: 200px;
     }
-    /* Pet Images */
     .draggable {
         width: 18px;
         height: 25px;
@@ -497,11 +429,9 @@ footer {
     .cat5, .dog5 {
         padding: 25px 100px 0 130px;
     }
-    /* Lost Game */
     #timeUP {
         top: 90px;
     }
-    /* Won Game */
     #goodjob {
         background-size: 190px 150px;
         top: 60px;
@@ -509,110 +439,67 @@ footer {
 }
 
 @media screen and (max-width: 630px) {
+    a.navbar-brand { 
+        padding: 5px 10px;
+    }
+    .titleFont {
+        margin: 0 auto 20px;
+    }
     #instruction {
         font-size: 1em;
     }
     #startButton {
         width: 50px;
+        margin: 3vh auto 0;
     }
-    /* Pet Pen */
-    #blurEnd .left,
-    /* Pet Store */
-    #blurEnd .right {
-        width: 200px;
-        height: 160px;
+    .gameArea {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3vh;
+        margin-left: 10px;
+    }
+    .gameArea .left {
+        margin-bottom: 15px; 
+    }
+    .gameArea .left,
+    .gameArea .right {
+        width: 260px;
+        height: 200px;
     }
     .mainPen img {
-        width: 200px;
+        width: 260px;
     }
     #petStore {
-        width: 160px;
-        height: 140px;
+        width: 200px;
+        height: 180px;
+        margin: auto;
     }
     #petStore img {
-        width: 160px;
+        width: 200px;
     }
-    /* Pet Images */
     .draggable {
-        width: 15px;
-        height: 20px;
+        width: 18px;
+        height: 25px;
     }
     .draggable img {
-        width: 20px;
-    }
-    .cat2 {
-        padding-left: 50px;
-    }
-    .cat3 {
-        padding: 15px 60px 0 30px;
-    }
-    .cat4 {
-        padding: 15px 30px 0 30px;
-    }
-    .cat5 {
-        padding: 25px 50px 0 50px;
-    }
-    .dog1 {
-        padding-top: 10px;
-        padding-left: 40px;
-    }
-    .dog2 {
-        padding-top: 5px;
-        padding-left: 60px;
-    }
-    .dog3 {
-        padding: 25px 30px 0 30px;
-    }
-    .dog4 {
-      padding-top: 0;
-      padding-left: 30px;
-    }
-    .dog5 {
-        padding: 5px 30px 0 10px;
-    }
-    /* Lost Game */
-    #timeUP {
-        top: 50px;
-    }
-}
-
-@media screen and (max-width: 590px) {
-    #instruction {
-        font-size: 0.9em;
+        width: 25px;
     }
 }
 
 @media screen and (max-width: 550px) {
-    /* Cats & Dogs Title */
     .titleFont {
         font-size: 2em;
     }
-    #startButton {
-        top: 100px;
-    }
-    /* Won Game */
     #goodjob {
         background-size: 150px 110px;
         top: 30px;
     }
 }
 
-@media screen and (max-width: 430px) {
-    /* Warning for Too Small Screen */
-    .fail {
-        visibility: visible;
-    }
-    #blurEnd:not(.titleFont) {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 380px) {
-    /* Home Link & Reset */
     nav.navbar a {
         font-size: 1em;
     }
-    /* Cats & Dogs Title */
     .titleFont {
         font-size: 1.8em;
     }
