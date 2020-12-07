@@ -5,7 +5,7 @@
 The objective of [Cats and Dogs Game](https://bernadetteestacio.site/projects/catsndogs-game/catsdogs) is to move all 10 pets to the pet store within 15 seconds.
 
 
-![Cats and Dogs Game Webpage](https://bernadetteestacio.site/projects/catsndogs-game/catsdogs)
+![Cats and Dogs Game Webpage](https://bernadetteestacio.site/cats-&-dogs.48fb7e53.png)
 
 
  - Single-page, responsive web app programmed with JavaScript
